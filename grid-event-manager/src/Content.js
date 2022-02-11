@@ -8,8 +8,10 @@ class Content extends Component {
 
   render() {
     return (
-      <div>
-        Content
+      <div className='row'>
+        <div className="col">col1</div>
+        <div className="col">col2</div>
+        
       </div>
     );
   }

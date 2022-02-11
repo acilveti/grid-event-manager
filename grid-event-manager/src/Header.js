@@ -7,8 +7,8 @@ class Header extends Component {
 
   render() {
     return (
-      <div>
-        <h1 class="display-6">GEMA - Grid Event Manager Application</h1>
+      <div className="container">
+        <h1 className="display-6">GEMA - Grid Event Manager Application</h1>
       </div>
     );
   }

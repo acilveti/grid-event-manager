@@ -7,8 +7,8 @@ class Footer extends Component {
 
   render() {
     return (
-      <div>
-        footer
+      <div className='row'>
+        <p className="text-center text-muted">@acilveti</p>
       </div>
     );
   }

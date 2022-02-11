@@ -5,10 +5,17 @@ import Footer from'./Footer.js'
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Content />
-      <Footer />
+    <div className='container vh-100'>
+      <div className="row">
+        <Header />
+      </div>
+      <div className="row">
+        <Content />
+      </div>
+      <div className="row pt-5 my-5 text-muted border-top">
+        <Footer />
+      </div>
+      
     </div>
   );
 }
