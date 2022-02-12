@@ -9,9 +9,9 @@ class ProfileData extends Component {
     render() {
         return (
             <div >                
-                <FormTimeVoltage />
-                <FormTimeVoltage />
-                <FormTimeVoltage />
+                <FormTimeVoltage order = "1"/>
+                <FormTimeVoltage order = "2"/>
+                <FormTimeVoltage order = "3"/>
             </div>
         );
     }
