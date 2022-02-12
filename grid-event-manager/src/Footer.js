@@ -8,7 +8,7 @@ class Footer extends Component {
   render() {
     return (
       <div className='row'>
-        <p className="text-center text-muted">@acilveti</p>
+        <p className="text-center text-muted">Programmed by @acilveti</p>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { EventChart } from './EventChart';
+import ProfileData  from './ProfileData';
 
 
 class Content extends Component {
@@ -10,7 +11,9 @@ class Content extends Component {
   render() {
     return (
       <div className='row'>
-        <div className="col">col1</div>
+        <div className="col">
+          <ProfileData />
+        </div>
         <div className="col">
           <EventChart />
         </div>
