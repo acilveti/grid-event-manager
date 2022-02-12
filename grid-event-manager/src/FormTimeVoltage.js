@@ -5,21 +5,29 @@ class FormTimeVoltage extends Component {
         super(props)
 
         this.state = {
-            task: { text: '' },
-            tasks: [],
+            voltageValue:  '' , 
+            timeValue:  '' ,
           };
+        this.handleChange = this.handleChange.bind(this);
     }
+   
+
+    handleChange(event) {
+        this.setState({[event.target.name]:event.target.value });
+      }
+    
+        
     
     render (){
         return (    
         <div className="form-group row">
             <label htmlFor={"inpunt number" + this.props.order} className="col-sm-2 col-form-label">{"t" + this.props.order}</label>
             <div className="col-sm-2">
-                <input type="number" className="form-control" id={"inpunt number" + this.props.order} placeholder="0" />
+                <input type="number" name="timeValue" value={this.state.timeValue} className="form-control" id={"inpunt number" + this.props.order} placeholder="0" onChange={this.handleChange} />
             </div>
             <label htmlFor={"inpunt number" + this.props.order} className="col-sm-2 col-form-label">{"v" + this.props.order}</label>
             <div className="col-sm-2">
-                <input type="number" className="form-control" id={"inpunt number" + this.props.order} placeholder="0" />
+                <input type="number"  name = "voltageValue" value={this.state.VoltageValue}className="form-control" id={"inpunt number" + this.props.order} placeholder="0" onChange={this.handleChange}/>
             </div>
         </div>
         );

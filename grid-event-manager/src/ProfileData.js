@@ -4,6 +4,8 @@ import  FormTimeVoltage from './FormTimeVoltage'
 class ProfileData extends Component {
     constructor(props) {
         super(props);
+
+        
     }
     
     render() {
