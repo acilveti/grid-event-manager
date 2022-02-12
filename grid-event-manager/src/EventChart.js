@@ -35,7 +35,7 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = [0, 1, 2, 3, 4, 5];
 
 export const data = {
   labels,
