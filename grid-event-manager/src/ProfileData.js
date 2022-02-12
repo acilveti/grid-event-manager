@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import  FormTimeVoltage from './FormTimeVoltage'
 
 class ProfileData extends Component {
     constructor(props) {
@@ -7,51 +8,10 @@ class ProfileData extends Component {
     
     render() {
         return (
-            <div >
-                <div className="form-group row">
-                    <label htmlFor="inputnumber3" className="col-sm-2 col-form-label">t1</label>
-                    <div className="col-sm-2">
-                        <input type="number" className="form-control" id="inputnumber3" placeholder="0" />
-                    </div>
-                    <label htmlFor="inputnumber3" className="col-sm-2 col-form-label">v1</label>
-                    <div className="col-sm-2">
-                        <input type="number" className="form-control" id="inputnumber3" placeholder="0" />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label htmlFor="inputnumber3" className="col-sm-2 col-form-label">t1</label>
-                    <div className="col-sm-2">
-                        <input type="number" className="form-control" id="inputnumber3" placeholder="0" />
-                    </div>
-                    <label htmlFor="inputnumber3" className="col-sm-2 col-form-label">v1</label>
-                    <div className="col-sm-2">
-                        <input type="number" className="form-control" id="inputnumber3" placeholder="0" />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label htmlFor="inputnumber3" className="col-sm-2 col-form-label">t1</label>
-                    <div className="col-sm-2">
-                        <input type="number" className="form-control" id="inputnumber3" placeholder="0" />
-                    </div>
-                    <label htmlFor="inputnumber3" className="col-sm-2 col-form-label">v1</label>
-                    <div className="col-sm-2">
-                        <input type="number" className="form-control" id="inputnumber3" placeholder="0" />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label htmlFor="inputnumber3" className="col-sm-2 col-form-label">t1</label>
-                    <div className="col-sm-2">
-                        <input type="number" className="form-control" id="inputnumber3" placeholder="0" />
-                    </div>
-                    <label htmlFor="inputnumber3" className="col-sm-2 col-form-label">v1</label>
-                    <div className="col-sm-2">
-                        <input type="number" className="form-control" id="inputnumber3" placeholder="0" />
-                    </div>
-                </div>
-
-                
-                        
-                    
+            <div >                
+                <FormTimeVoltage />
+                <FormTimeVoltage />
+                <FormTimeVoltage />
             </div>
         );
     }
