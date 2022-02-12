@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { EventChart } from './EventChart';
 
 
 class Content extends Component {
@@ -10,7 +11,9 @@ class Content extends Component {
     return (
       <div className='row'>
         <div className="col">col1</div>
-        <div className="col">col2</div>
+        <div className="col">
+          <EventChart />
+        </div>
         
       </div>
     );
