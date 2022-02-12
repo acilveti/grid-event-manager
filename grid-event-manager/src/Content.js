@@ -10,11 +10,11 @@ class Content extends Component {
 
   render() {
     return (
-      <div className='row'>
-        <div className="col">
+      <div className='row justify-content-center align-items-center'>
+        <div className="col justify-content-center align-items-center">
           <ProfileData />
         </div>
-        <div className="col">
+        <div className="col align-items-center">
           <EventChart />
         </div>
         
