@@ -9,11 +9,15 @@ class FormTimeVoltage extends Component {
             timeValue:  '' ,
           };
         this.handleChange = this.handleChange.bind(this);
+
+        
+
     }
    
 
     handleChange(event) {
         this.setState({[event.target.name]:event.target.value });
+        this.props.callbackFromParent(this.state);
       }
     
         
