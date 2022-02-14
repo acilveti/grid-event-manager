@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -12,49 +12,62 @@ import {
 import { Line } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'VOLTAGE ACCEPTANCE CRITERIA',
-    },
-  },
-};
+class EventChart extends Component {
+  constructor(props) {
+    super(props)
 
-const labels = [0, 1, 2, 3, 4, 5];
+    this.state = {
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'VOLTAGE ACCEPTANCE CRITERIA',
+          },
+        },
+      },
+      
+      data : {
+        labels:[0, 1, 2, 3, 4, 5, 6, 7],
+        datasets: [
+          {
+            label: 'LVRT',
+            data: [0, 1, 2, 3, 4, 7],
+            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          },
+          {
+            label: 'HVRD',
+            data: [0, 1, 2, 3, 4, 11],
+            borderColor: 'rgb(53, 162, 235)',
+            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+          },
+        ],
+      }
+    }; 
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'LVRT',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'HVRD',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
+    
+    ChartJS.register(
+      CategoryScale,
+      LinearScale,
+      PointElement,
+      LineElement,
+      Title,
+      Tooltip,
+      Legend
+    );
+  
 
-export function EventChart() {
-  return <Line options={options} data={data} />;
-}
+    
+  }
+
+  render() {
+    return (<Line options={this.state.options} data={this.state.data}/>);
+    }
+  }
+
+export default EventChart

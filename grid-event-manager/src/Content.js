@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { EventChart } from './EventChart';
+import EventChart from './EventChart';
 import ProfileData  from './ProfileData';
 
 
@@ -26,7 +26,7 @@ class Content extends Component {
           <ProfileData  callbackFromGrandParent={this.myCallback}/>
         </div>
         <div className="col align-items-center">
-          <EventChart />
+          <EventChart timeValues = {this.state.timeValues} voltageValues = {this.state.voltageValues} />
         </div>
 
       </div>
