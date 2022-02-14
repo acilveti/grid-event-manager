@@ -17,10 +17,9 @@ class ProfileData extends Component {
     render() {
         return (
             <div >                
-                <FormTimeVoltage callbackFromParent={this.myCallback} order = "1"/>
-                <FormTimeVoltage order = "2"/>
-                <FormTimeVoltage order = "3"/>
-                {console.log(this.state.listDataFromChild)}
+                <FormTimeVoltage callbackFromParent={this.props.callbackFromGrandParent} order = "1"/>
+                <FormTimeVoltage callbackFromParent={this.props.callbackFromGrandParent} order = "2"/>
+                <FormTimeVoltage callbackFromParent={this.props.callbackFromGrandParent} order = "3"/>
             </div>
         );
     }

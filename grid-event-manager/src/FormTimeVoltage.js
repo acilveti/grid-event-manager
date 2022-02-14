@@ -17,7 +17,7 @@ class FormTimeVoltage extends Component {
 
     handleChange(event) {
         this.setState({[event.target.name]:event.target.value });
-        this.props.callbackFromParent(this.state);
+        this.props.callbackFromParent(this.props.order, this.state);
       }
     
         
